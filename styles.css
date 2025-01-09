@@ -140,20 +140,58 @@ nav {
   color: white;
   transform: scale(1.1);
 }
+@media (max-width: 768px) {
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        margin-left: auto;
+    }
+
+    .btn-contact {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+/* Hide the menu toggle button by default */
+.menu-toggle {
+    display: none;
+}
+
 
 /* Hero Section */
 .hero {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   padding: 0 5%;
-  margin-top: 80px;
-  background: url("/WhatsApp\ Image\ 2024-09-24\ at\ 01.04.26_9c5f6797.jpg")
-    no-repeat center/cover;
-  position: relative;
-  z-index: 1;
+  margin-top: 80px; */
+  /* background: url("/WhatsApp\ Image\ 2024-09-24\ at\ 01.04.26_9c5f6797.jpg")
+    no-repeat center/cover; */
+  /* position: relative;
+  z-index: 1; */
 }
 
 .hero h1 {
@@ -267,6 +305,143 @@ nav {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+}
+/* Adjust carousel image height */
+.hero-duplicate{
+     /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5%;
+    margin-top: 80px; 
+    /* background: url('/WhatsApp\ Image\ 2024-09-24\ at\ 01.04.26_9c5f6797.jpg') no-repeat center/cover; */
+    /* z-index: 1;  */
+
+}
+.carousel-item{
+    position: relative;
+     display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center content */
+    align-items: center; /* Align items */
+    height: auto; /* Allow height to adjust */
+    
+
+}
+.carousel-item img {
+    max-width: 100%;
+    height: 100vh; /* Makes the images cover the entire viewport height */
+    object-fit: cover; /* Ensures images scale properly without distortion */
+    margin: 0;
+    padding: 0;
+}
+
+/* Center carousel text */
+.carousel_caption {
+    position: absolute;
+    /* right: 15%;
+    bottom: 40%;
+    left: 15%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /*Semi-transparent background for better readability */
+    border-radius: 10px;
+}
+
+/* Style for the heading text */
+.carousel_caption h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 0;
+    word-wrap: break-word;
+}
+
+/* Subtitle styling */
+.carousel_caption h2 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bolder;
+    word-wrap: break-word;
+    
+}
+
+/* Button styling */
+.carousel_caption .btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.carousel_caption .btn:is(:hover, :focus) {
+  background-color: #E5A186;
+    border-radius: #E5A186;
+    color: white;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .carousel_caption {
+        top: 70%; /* Push it lower to avoid navbar overlap */
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel_caption {
+       top: 60%;
+       padding: 5px;
+    }
+
+    .carousel_caption h1 {
+        font-size: 2rem; /* Smaller text for smaller screens */
+    }
+
+    .carousel_caption h2 {
+        font-size: 1rem;
+    }
+
+    .carousel_caption p.subtitle {
+        font-size: 0.875rem;
+    }
+
+    .carousel_caption .btn {
+        font-size: 0.875rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel_caption {
+        top: 60%;
+        padding: 5px;
+    }
+
+    .carousel_caption h1 {
+        font-size: 1rem; /* Smaller text for smaller screens */
+    }
+
+    .carousel_caption h2 {
+        font-size: 0.7rem;
+    }
+
+    .carousel_caption p.subtitle {
+        font-size: 0.5rem;
+    }
+
+    .carousel_caption .btn {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
 }
 
 .toggle-menu {

@@ -19,7 +19,7 @@
             <a href="index.html" class="logo">मातृबोधः</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#wisdom">About</a></li>
+                <li><a href="index.html#wisdom">About</a></li>
                 <li class="dropdown">
                     <a href="#">Content</a>
                     <ul class="dropdown-content">
@@ -28,6 +28,7 @@
                         <li><a href="#">Activities</a></li>
                     </ul>
                 </li>
+                <li><a href="login.html">Login</a></li>
             </ul>
             <a href="#" class="btn-contact">Contact</a>
         </nav>
@@ -99,10 +100,14 @@
                 </div>
             </div>
             <div class="btn">
-                <button type="submit" id="button"><a href="http://127.0.0.1:5501/index.html">Send</a></button>
+                <button type="submit" id="button" onclick="notify()"><a href="index.html">Send</a></button>
             </div>
         </div>
     </div>
 </body>
-
+<script>
+    function notify(){
+        alert("Feedback Submitted Sucessfully")
+    }
+</script>
 </html>
