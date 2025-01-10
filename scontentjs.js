@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("scroll", function() {
     const cards = document.querySelectorAll(".roadmap-card");
     const triggerBottom = window.innerHeight / 5 * 4;
@@ -11,4 +12,5 @@ document.addEventListener("scroll", function() {
             card.classList.remove("active");
         }
     });
+});
 });
