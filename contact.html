@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Page</title>
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="scontentcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: none;
+            color: #333;
+            overflow-x: hidden;
+        }
+        .contact {
+            padding: 50px 10%;
+        }
+        .contact .content {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 1s ease;
+        }
+        .contact .content h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .contact .content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .contactInfo, .contactForm {
+            flex: 1 1 45%;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease;
+        }
+        .contactInfo .box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            animation: fadeInLeft 1.2s ease;
+        }
+        .contactInfo .icon {
+            font-size: 2rem;
+            color: #b65a35;
+            margin-right: 20px;
+        }
+        .contactInfo h3 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .contactInfo p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .contactForm h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .contactForm .inputBox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .contactForm .inputBox input, 
+        .contactForm .inputBox textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: 0.3s ease;
+        }
+        .contactForm .inputBox input:focus, 
+        .contactForm .inputBox textarea:focus {
+            border-color: #b65a35;
+        }
+        .contactForm .inputBox span {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9rem;
+            color: #aaa;
+            pointer-events: none;
+            transition: 0.3s ease;
+        }
+        .contactForm .inputBox input:focus + span,
+        .contactForm .inputBox textarea:focus + span,
+        .contactForm .inputBox input:valid + span,
+        .contactForm .inputBox textarea:valid + span {
+            top: -10px;
+            left: 5px;
+            font-size: 0.8rem;
+            color: #b65a35;
+        }
+        .contactForm .inputBox textarea {
+            resize: none;
+            height: 100px;
+        }
+        .contactForm .inputBox input[type="submit"] {
+            background:#b65a35;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .contactForm .inputBox input[type="submit"]:hover {
+            background: #b65a35;
+        }
+        .contactInfo .box:hover .icon {
+            color: #b65a35;
+        }
+        .contactInfo .box:hover h3 {
+            color:#b65a35;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .contactInfo, .contactForm {
+                flex: 1 1 100%;
+            }
+        }
+
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background: url('WhatsApp Image 2024-09-24 at 01.04.26_9c5f6797.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+        overflow-x: hidden;
+    }
+    .contact {
+        padding: 50px 10%;
+        background: rgba(255, 255, 255, 0.8); /* Optional: Transparent overlay to make text readable */
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 1200px;
+    }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+    font-size: 70px;
+    font-weight: bold;
+    color: black;
+    margin-top: 0;
+}
+
+        /* Base styling for the content section */
+.content {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 1.5s ease;
+}
+
+.content h3 {
+    font-size: 2.5rem;
+    color: #b65a35;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Animated heading style */
+.animated-text {
+    animation: slideIn 2s ease-in-out, colorChange 4s infinite alternate;
+    display: inline-block;
+}
+
+/* Sliding effect for heading */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Color-changing effect for heading */
+@keyframes colorChange {
+    0% {
+        color:#b65a35;
+    }
+    100% {
+        color: #b65a35;
+    }
+}
+
+/* Animated paragraphs */
+.animated-paragraph {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 10px;
+    animation: fadeIn 3s ease, moveUp 2.5s ease;
+}
+
+/* Fade-in effect for paragraphs */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Smooth upward motion for paragraphs */
+@keyframes moveUp {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <section id="hero" class="hero">
+                <h1 class="wave-text">
+                  <span>मा</span><span>तृ</span><span>बो</span><span>धः</span><span><img id="audio-icon" src="https://ttdevasthanams.ap.gov.in/muteIcon.svg"></span>
+                </h1>
+              </section>
+            <h3 class="animated-text">Contact Us</h3>
+            <p class="animated-paragraph"><h1>Educating children through India's timeless wisdom and cultural heritage.</h1></p>
+            <p class="animated-paragraph"><h1>Our platform offers an immersive learning experience for children, blending education with the timeless wisdom of India's rich cultural traditions.</h2></p>
+            </div></h1>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>1234 Abcd,<br>Pune, India,<br>14568</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>0000-1111-22</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>info@matrubodhah.edu</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js" async></script>
+    <script src="scrollscript.js"></script>
+    <script src="audio.js"></script>
+</body>
+</html>
